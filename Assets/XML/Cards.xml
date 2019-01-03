@@ -1,0 +1,465 @@
+﻿<CardCollection>
+  <Cards>
+    
+    <Card Name="RedAtk1">
+      <value>1</value>
+      <color>Red</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="RedAtk2">
+      <value>2</value>
+      <color>Red</color>
+      <action>Attack</action>
+    </Card>
+      <Card Name="RedAtk3">
+      <value>3</value>
+      <color>Red</color>
+      <action>Attack</action>
+    </Card>
+      <Card Name="RedAtk4">
+      <value>4</value>
+      <color>Red</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="RedAtk5">
+      <value>5</value>
+      <color>Red</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="RedAtk6">
+      <value>6</value>
+      <color>Red</color>
+      <action>Attack</action>
+    </Card>
+      <Card Name="RedAtk7">
+      <value>7</value>
+      <color>Red</color>
+      <action>Attack</action>
+    </Card>
+      <Card Name="RedAtk8">
+      <value>8</value>
+      <color>Red</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="RedAtk9">
+      <value>9</value>
+      <color>Red</color>
+      <action>Attack</action>
+    </Card>
+  
+    <Card Name="BluAtk1">
+      <value>1</value>
+      <color>Blue</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="BluAtk2">
+      <value>2</value>
+      <color>Blue</color>
+      <action>Attack</action>
+    </Card>
+      <Card Name="BluAtk3">
+      <value>3</value>
+      <color>Blue</color>
+      <action>Attack</action>
+    </Card>
+      <Card Name="BluAtk4">
+      <value>4</value>
+      <color>Blue</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="BluAtk5">
+      <value>5</value>
+      <color>Blue</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="BluAtk6">
+      <value>6</value>
+      <color>Blue</color>
+      <action>Attack</action>
+    </Card>
+      <Card Name="BluAtk7">
+      <value>7</value>
+      <color>Blue</color>
+      <action>Attack</action>
+    </Card>
+      <Card Name="BluAtk8">
+      <value>8</value>
+      <color>Blue</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="BluAtk9">
+      <value>9</value>
+      <color>Blue</color>
+      <action>Attack</action>
+    </Card>
+  
+    <Card Name="GrnAtk1">
+      <value>1</value>
+      <color>Green</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="GrnAtk2">
+      <value>2</value>
+      <color>Green</color>
+      <action>Attack</action>
+    </Card>
+      <Card Name="GrnAtk3">
+      <value>3</value>
+      <color>Green</color>
+      <action>Attack</action>
+    </Card>
+      <Card Name="GrnAtk4">
+      <value>4</value>
+      <color>Green</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="GrnAtk5">
+      <value>5</value>
+      <color>Green</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="GrnAtk6">
+      <value>6</value>
+      <color>Green</color>
+      <action>Attack</action>
+    </Card>
+      <Card Name="GrnAtk7">
+      <value>7</value>
+      <color>Green</color>
+      <action>Attack</action>
+    </Card>
+      <Card Name="GrnAtk8">
+      <value>8</value>
+      <color>Green</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="GrnAtk9">
+      <value>9</value>
+      <color>Green</color>
+      <action>Attack</action>
+    </Card>
+
+    <Card Name="YlwAtk1">
+      <value>1</value>
+      <color>Yellow</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="YlwAtk2">
+      <value>2</value>
+      <color>Yellow</color>
+      <action>Attack</action>
+    </Card>
+      <Card Name="YlwAtk3">
+      <value>3</value>
+      <color>Yellow</color>
+      <action>Attack</action>
+    </Card>
+      <Card Name="YlwAtk4">
+      <value>4</value>
+      <color>Yellow</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="YlwAtk5">
+      <value>5</value>
+      <color>Yellow</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="YlwAtk6">
+      <value>6</value>
+      <color>Yellow</color>
+      <action>Attack</action>
+    </Card>
+      <Card Name="YlwAtk7">
+      <value>7</value>
+      <color>Yellow</color>
+      <action>Attack</action>
+    </Card>
+      <Card Name="YlwAtk8">
+      <value>8</value>
+      <color>Yellow</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="YlwAtk9">
+      <value>9</value>
+      <color>Yellow</color>
+      <action>Attack</action>
+    </Card>
+  
+    <Card Name="BlkAtk1">
+      <value>1</value>
+      <color>Black</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="BlkAtk2">
+      <value>2</value>
+      <color>Black</color>
+      <action>Attack</action>
+    </Card>
+      <Card Name="BlkAtk3">
+      <value>3</value>
+      <color>Black</color>
+      <action>Attack</action>
+    </Card>
+      <Card Name="BlkAtk4">
+      <value>4</value>
+      <color>Black</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="BlkAtk5">
+      <value>5</value>
+      <color>Black</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="BlkAtk6">
+      <value>6</value>
+      <color>Black</color>
+      <action>Attack</action>
+    </Card>
+      <Card Name="BlkAtk7">
+      <value>7</value>
+      <color>Black</color>
+      <action>Attack</action>
+    </Card>
+      <Card Name="BlkAtk8">
+      <value>8</value>
+      <color>Black</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="BlkAtk9">
+      <value>9</value>
+      <color>Black</color>
+      <action>Attack</action>
+    </Card>
+    
+      <Card Name="RedHeal1">
+      <value>1</value>
+      <color>Red</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="RedHeal2">
+      <value>2</value>
+      <color>Red</color>
+      <action>Heal</action>
+    </Card>
+      <Card Name="RedHeal3">
+      <value>3</value>
+      <color>Red</color>
+      <action>Heal</action>
+    </Card>
+      <Card Name="RedHeal4">
+      <value>4</value>
+      <color>Red</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="RedHeal5">
+      <value>5</value>
+      <color>Red</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="RedHeal6">
+      <value>6</value>
+      <color>Red</color>
+      <action>Heal</action>
+    </Card>
+      <Card Name="RedHeal7">
+      <value>7</value>
+      <color>Red</color>
+      <action>Heal</action>
+    </Card>
+      <Card Name="RedHeal8">
+      <value>8</value>
+      <color>Red</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="RedHeal9">
+      <value>9</value>
+      <color>Red</color>
+      <action>Heal</action>
+    </Card>
+  
+    <Card Name="BluHeal1">
+      <value>1</value>
+      <color>Blue</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="BluHeal2">
+      <value>2</value>
+      <color>Blue</color>
+      <action>Heal</action>
+    </Card>
+      <Card Name="BluHeal3">
+      <value>3</value>
+      <color>Blue</color>
+      <action>Heal</action>
+    </Card>
+      <Card Name="BluHeal4">
+      <value>4</value>
+      <color>Blue</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="BluHeal5">
+      <value>5</value>
+      <color>Blue</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="BluHeal6">
+      <value>6</value>
+      <color>Blue</color>
+      <action>Heal</action>
+    </Card>
+      <Card Name="BluHeal7">
+      <value>7</value>
+      <color>Blue</color>
+      <action>Heal</action>
+    </Card>
+      <Card Name="BluHeal8">
+      <value>8</value>
+      <color>Blue</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="BluHeal9">
+      <value>9</value>
+      <color>Blue</color>
+      <action>Heal</action>
+    </Card>
+  
+    <Card Name="GrnHeal1">
+      <value>1</value>
+      <color>Green</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="GrnHeal2">
+      <value>2</value>
+      <color>Green</color>
+      <action>Heal</action>
+    </Card>
+      <Card Name="GrnHeal3">
+      <value>3</value>
+      <color>Green</color>
+      <action>Heal</action>
+    </Card>
+      <Card Name="GrnHeal4">
+      <value>4</value>
+      <color>Green</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="GrnHeal5">
+      <value>5</value>
+      <color>Green</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="GrnHeal6">
+      <value>6</value>
+      <color>Green</color>
+      <action>Heal</action>
+    </Card>
+      <Card Name="GrnHeal7">
+      <value>7</value>
+      <color>Green</color>
+      <action>Heal</action>
+    </Card>
+      <Card Name="GrnHeal8">
+      <value>8</value>
+      <color>Green</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="GrnHeal9">
+      <value>9</value>
+      <color>Green</color>
+      <action>Heal</action>
+    </Card>
+
+    <Card Name="YlwHeal1">
+      <value>1</value>
+      <color>Yellow</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="YlwHeal2">
+      <value>2</value>
+      <color>Yellow</color>
+      <action>Heal</action>
+    </Card>
+      <Card Name="YlwHeal3">
+      <value>3</value>
+      <color>Yellow</color>
+      <action>Heal</action>
+    </Card>
+      <Card Name="YlwHeal4">
+      <value>4</value>
+      <color>Yellow</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="YlwHeal5">
+      <value>5</value>
+      <color>Yellow</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="YlwHeal6">
+      <value>6</value>
+      <color>Yellow</color>
+      <action>Heal</action>
+    </Card>
+      <Card Name="YlwHeal7">
+      <value>7</value>
+      <color>Yellow</color>
+      <action>Heal</action>
+    </Card>
+      <Card Name="YlwHeal8">
+      <value>8</value>
+      <color>Yellow</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="YlwHeal9">
+      <value>9</value>
+      <color>Yellow</color>
+      <action>Heal</action>
+    </Card>
+  
+    <Card Name="BlkHeal1">
+      <value>1</value>
+      <color>Black</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="BlkHeal2">
+      <value>2</value>
+      <color>Black</color>
+      <action>Heal</action>
+    </Card>
+      <Card Name="BlkHeal3">
+      <value>3</value>
+      <color>Black</color>
+      <action>Heal</action>
+    </Card>
+      <Card Name="BlkHeal4">
+      <value>4</value>
+      <color>Black</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="BlkHeal5">
+      <value>5</value>
+      <color>Black</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="BlkHeal6">
+      <value>6</value>
+      <color>Black</color>
+      <action>Heal</action>
+    </Card>
+      <Card Name="BlkHeal7">
+      <value>7</value>
+      <color>Black</color>
+      <action>Heal</action>
+    </Card>
+      <Card Name="BlkHeal8">
+      <value>8</value>
+      <color>Black</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="BlkHeal9">
+      <value>9</value>
+      <color>Black</color>
+      <action>Heal</action>
+    </Card>
+  
+  </Cards>
+</CardCollection>
