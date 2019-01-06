@@ -1,5 +1,5 @@
-﻿<CardCollection>
-  <Cards>
+﻿<Container>
+  <Collection>
     
     <Card Name="RedAtk1">
       <value>1</value>
@@ -461,5 +461,5 @@
       <action>Heal</action>
     </Card>
   
-  </Cards>
-</CardCollection>
+  </Collection>
+</Container>

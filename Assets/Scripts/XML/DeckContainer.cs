@@ -2,20 +2,12 @@
 using System.IO;
 using System.Xml.Serialization;
 
-[XmlRoot("DeckCollection")]
+[XmlRoot("Container")]
 public class DeckContainer
 {
-    [XmlArray("Decks")]
+    [XmlArray("Collection")]
     [XmlArrayItem("Deck")]
     public List<DeckXML> decks = new List<DeckXML>();
-
-    public void Save(string path)
-    {
-        // Save data from a container to an XML file
-        XmlSerializer serializer = new XmlSerializer(typeof(DeckContainer));
-        using (var stream = new FileStream(path, FileMode.Create))
-            serializer.Serialize(stream, this);
-    }
 
     public static DeckContainer Load(string path)
     {
@@ -23,5 +15,14 @@ public class DeckContainer
         XmlSerializer serializer = new XmlSerializer(typeof(CardContainer));
         using (FileStream stream = new FileStream(path, FileMode.Open))
             return serializer.Deserialize(stream) as DeckContainer;
+    }
+
+    public static Dictionary<string, DeckXML> GetDictionary(DeckContainer container)
+    {
+        // Add each deck in the XML container to a dictionary
+        Dictionary<string, DeckXML> dictionary = new Dictionary<string, DeckXML>();
+        foreach (DeckXML deck in container.decks)
+            dictionary.Add(deck.name, deck);
+        return dictionary;
     }
 }

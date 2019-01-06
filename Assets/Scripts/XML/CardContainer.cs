@@ -2,10 +2,10 @@
 using System.IO;
 using System.Xml.Serialization;
 
-[XmlRoot("CardCollection")]
+[XmlRoot("Container")]
 public class CardContainer
 {
-    [XmlArray("Cards")]
+    [XmlArray("Collection")]
     [XmlArrayItem("Card")]
     public List<CardXML> cards = new List<CardXML>();
 
