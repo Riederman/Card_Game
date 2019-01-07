@@ -2,7 +2,7 @@
 using System.IO;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManagerMB : Singleton<GameManagerMB>
 {
     [SerializeField] private ActorMB player;
     [SerializeField] private ActorMB monster;
