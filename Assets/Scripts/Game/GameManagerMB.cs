@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.IO;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameManagerMB : Singleton<GameManagerMB>
 {
@@ -18,6 +16,6 @@ public class GameManagerMB : Singleton<GameManagerMB>
 
     private void Start()
     {
-        stateMachine.Run();
+        //StartCoroutine(stateMachine.Run());
     }
 }
