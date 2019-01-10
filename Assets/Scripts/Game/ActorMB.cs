@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActorMB : MonoBehaviour
+public abstract class ActorMB : MonoBehaviour
 {
     [SerializeField] private string deckName;
     [SerializeField] private HandMB hand;
     [SerializeField] private HealthBarMB healthBar;
 
+    private int cardIndex;
     private Deck deck;
 
     public System.Action OnActorDeath;
@@ -18,9 +19,23 @@ public class ActorMB : MonoBehaviour
     public bool HasAppliedEffects { get; private set; }
     public bool HasEndedTurn { get; private set; }
 
+    protected abstract int GetSelectedIndex();
+
     private void Awake()
     {
         deck = new Deck(deckName);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            DrawCards();
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            SelectCards();
+        }
     }
 
     private void OnEnable()
@@ -47,6 +62,7 @@ public class ActorMB : MonoBehaviour
         foreach (DeckComponent component in components)
             cards.Add(CardManagerMB.Instance.GetCard(component.name));
         yield return hand.AddCards(cards);
+        hand.SubscribeOnCardSelect(OnCardSelect);
         HasDrawnCards = true;
     }
 
@@ -57,7 +73,14 @@ public class ActorMB : MonoBehaviour
 
     public IEnumerator SelectCardsCoroutine()
     {
-        // TODO: Select cards
+        cardIndex = GetSelectedIndex();
+
+        while (cardIndex < 0)
+        {
+            yield return null;
+        }
+
+        yield return hand.SelectCard(cardIndex);
         yield return new WaitForSeconds(2);
         HasSelectedCards = true;
     }
@@ -88,6 +111,8 @@ public class ActorMB : MonoBehaviour
 
     public void EndTurn()
     {
+        hand.UnsubscribeOnCardSelect(OnCardSelect);
+        hand.ClearHand();
         HasDrawnCards = false;
         HasSelectedCards = false;
         HasRevealedCards = false;
@@ -107,5 +132,10 @@ public class ActorMB : MonoBehaviour
         {
             OnActorDeath();
         }
+    }
+
+    private void OnCardSelect(int index)
+    {
+        cardIndex = index;
     }
 }

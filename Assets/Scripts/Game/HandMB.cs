@@ -28,11 +28,18 @@ public class HandMB : MonoBehaviour
             // Set card view to match data
             card.transform.position = slotTrans[i].position;
             card.gameObject.SetActive(true);
-            card.SetView(list[i]);
+            card.SetProperties(i, list[i]);
             cards.Add(card);
             // Yield until next card
             yield return new WaitForSeconds(timePerCard);
         }
+    }
+
+    public IEnumerator SelectCard(int index)
+    {
+        Assert.IsTrue(index >= 0 && index < cards.Count);
+        yield return new WaitForSeconds(1);
+        cards[index].ToggleGlow();
     }
 
     public void ClearHand()
@@ -41,5 +48,17 @@ public class HandMB : MonoBehaviour
         foreach (CardMB card in cards)
             cardPool.ReturnObject(card.gameObject);
         cards.Clear();
+    }
+
+    public void SubscribeOnCardSelect(System.Action<int> function)
+    {
+        foreach (CardMB card in cards)
+            card.OnCardSelect += function;
+    }
+
+    public void UnsubscribeOnCardSelect(System.Action<int> function)
+    {
+        foreach (CardMB card in cards)
+            card.OnCardSelect -= function;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
 public static class ExtensionMethods
 {
@@ -9,5 +10,10 @@ public static class ExtensionMethods
         foreach (T item in toClone)
             list.Add((T)item.Clone());
         return list;
+    }
+
+    public static void ToggleActive(this GameObject gameObj)
+    {
+        gameObj.SetActive(!gameObj.activeSelf);
     }
 }
