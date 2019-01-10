@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1901535489789332}
+  m_IsPrefabAsset: 1
+--- !u!1 &1901535489789332
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4021749323042122}
+  - component: {fileID: 114566399928348722}
+  m_Layer: 0
+  m_Name: Card Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4021749323042122
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1901535489789332}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114566399928348722
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1901535489789332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfd6f633609674a45ac9e3ee735102f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorPairs:
+  - color: 0
+    sprite: {fileID: 21300000, guid: b7c75de91fc10f44c89e0dbd817ff530, type: 3}
+  - color: 1
+    sprite: {fileID: 21300000, guid: 9f889a796818dcd40aff2a2eb1c1a1ce, type: 3}
+  - color: 2
+    sprite: {fileID: 21300000, guid: 928346f35a7407a45bdb0aa7e0bc53dc, type: 3}
+  - color: 3
+    sprite: {fileID: 21300000, guid: 2b3e15dcca1f3cf4eb355924eb6f9d5f, type: 3}
+  - color: 4
+    sprite: {fileID: 21300000, guid: 4ae70f024fb7f8c45a37afcd771349bc, type: 3}
+  actionPairs:
+  - action: 0
+    sprite: {fileID: 21300000, guid: 7a680c0dbaaf5334f883d95388b41b17, type: 3}
+  - action: 1
+    sprite: {fileID: 21300000, guid: 6bf24fc1a6a648b46b00da57b215bc4c, type: 3}
