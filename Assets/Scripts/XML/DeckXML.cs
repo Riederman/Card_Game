@@ -7,7 +7,6 @@ public class DeckXML
     [XmlAttribute("Name")]
     public string name;
 
-    [XmlArray("Components")]
-    [XmlArrayItem("Card")]
+    [XmlElement("Component")]
     public List<DeckComponent> components = new List<DeckComponent>();
 }

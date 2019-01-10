@@ -12,7 +12,7 @@ public class DeckContainer
     public static DeckContainer Load(string path)
     {
         // Load data from an XML file to a container
-        XmlSerializer serializer = new XmlSerializer(typeof(CardContainer));
+        XmlSerializer serializer = new XmlSerializer(typeof(DeckContainer));
         using (FileStream stream = new FileStream(path, FileMode.Open))
             return serializer.Deserialize(stream) as DeckContainer;
     }

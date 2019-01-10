@@ -138,52 +138,6 @@
       <color>Green</color>
       <action>Attack</action>
     </Card>
-
-    <Card Name="YlwAtk1">
-      <value>1</value>
-      <color>Yellow</color>
-      <action>Attack</action>
-    </Card>
-    <Card Name="YlwAtk2">
-      <value>2</value>
-      <color>Yellow</color>
-      <action>Attack</action>
-    </Card>
-      <Card Name="YlwAtk3">
-      <value>3</value>
-      <color>Yellow</color>
-      <action>Attack</action>
-    </Card>
-      <Card Name="YlwAtk4">
-      <value>4</value>
-      <color>Yellow</color>
-      <action>Attack</action>
-    </Card>
-    <Card Name="YlwAtk5">
-      <value>5</value>
-      <color>Yellow</color>
-      <action>Attack</action>
-    </Card>
-    <Card Name="YlwAtk6">
-      <value>6</value>
-      <color>Yellow</color>
-      <action>Attack</action>
-    </Card>
-      <Card Name="YlwAtk7">
-      <value>7</value>
-      <color>Yellow</color>
-      <action>Attack</action>
-    </Card>
-      <Card Name="YlwAtk8">
-      <value>8</value>
-      <color>Yellow</color>
-      <action>Attack</action>
-    </Card>
-    <Card Name="YlwAtk9">
-      <value>9</value>
-      <color>Yellow</color>
-      <action>Attack</action>
-    </Card>
   
     <Card Name="BlkAtk1">
       <value>1</value>
@@ -228,6 +182,52 @@
     <Card Name="BlkAtk9">
       <value>9</value>
       <color>Black</color>
+      <action>Attack</action>
+    </Card>
+
+    <Card Name="YlwAtk1">
+      <value>1</value>
+      <color>Yellow</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="YlwAtk2">
+      <value>2</value>
+      <color>Yellow</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="YlwAtk3">
+      <value>3</value>
+      <color>Yellow</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="YlwAtk4">
+      <value>4</value>
+      <color>Yellow</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="YlwAtk5">
+      <value>5</value>
+      <color>Yellow</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="YlwAtk6">
+      <value>6</value>
+      <color>Yellow</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="YlwAtk7">
+      <value>7</value>
+      <color>Yellow</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="YlwAtk8">
+      <value>8</value>
+      <color>Yellow</color>
+      <action>Attack</action>
+    </Card>
+    <Card Name="YlwAtk9">
+      <value>9</value>
+      <color>Yellow</color>
       <action>Attack</action>
     </Card>
     
@@ -368,52 +368,6 @@
       <color>Green</color>
       <action>Heal</action>
     </Card>
-
-    <Card Name="YlwHeal1">
-      <value>1</value>
-      <color>Yellow</color>
-      <action>Heal</action>
-    </Card>
-    <Card Name="YlwHeal2">
-      <value>2</value>
-      <color>Yellow</color>
-      <action>Heal</action>
-    </Card>
-      <Card Name="YlwHeal3">
-      <value>3</value>
-      <color>Yellow</color>
-      <action>Heal</action>
-    </Card>
-      <Card Name="YlwHeal4">
-      <value>4</value>
-      <color>Yellow</color>
-      <action>Heal</action>
-    </Card>
-    <Card Name="YlwHeal5">
-      <value>5</value>
-      <color>Yellow</color>
-      <action>Heal</action>
-    </Card>
-    <Card Name="YlwHeal6">
-      <value>6</value>
-      <color>Yellow</color>
-      <action>Heal</action>
-    </Card>
-      <Card Name="YlwHeal7">
-      <value>7</value>
-      <color>Yellow</color>
-      <action>Heal</action>
-    </Card>
-      <Card Name="YlwHeal8">
-      <value>8</value>
-      <color>Yellow</color>
-      <action>Heal</action>
-    </Card>
-    <Card Name="YlwHeal9">
-      <value>9</value>
-      <color>Yellow</color>
-      <action>Heal</action>
-    </Card>
   
     <Card Name="BlkHeal1">
       <value>1</value>
@@ -458,6 +412,52 @@
     <Card Name="BlkHeal9">
       <value>9</value>
       <color>Black</color>
+      <action>Heal</action>
+    </Card>
+
+    <Card Name="YlwHeal1">
+      <value>1</value>
+      <color>Yellow</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="YlwHeal2">
+      <value>2</value>
+      <color>Yellow</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="YlwHeal3">
+      <value>3</value>
+      <color>Yellow</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="YlwHeal4">
+      <value>4</value>
+      <color>Yellow</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="YlwHeal5">
+      <value>5</value>
+      <color>Yellow</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="YlwHeal6">
+      <value>6</value>
+      <color>Yellow</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="YlwHeal7">
+      <value>7</value>
+      <color>Yellow</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="YlwHeal8">
+      <value>8</value>
+      <color>Yellow</color>
+      <action>Heal</action>
+    </Card>
+    <Card Name="YlwHeal9">
+      <value>9</value>
+      <color>Yellow</color>
       <action>Heal</action>
     </Card>
   

@@ -2,45 +2,31 @@
   <Collection>
     
     <Deck Name="Player">
-      <Components>
 
-        <Card>
-          <name>RedAtk9</name>
-          <weight>10</weight>
-        </Card>
+      <Component>
+        <name>BlkAtk9</name>
+        <weight>10</weight>
+      </Component>
 
-        <Card>
-          <name>BlkAtk9</name>
-          <weight>10</weight>
-        </Card>
+      <Component>
+        <name>RedAtk9</name>
+        <weight>10</weight>
+      </Component>
 
-        <Card>
-          <name>BlkHeal9</name>
-          <weight>5</weight>
-        </Card>
-        
-      </Components>
     </Deck>
 
     <Deck Name="Monster">
-      <Components>
 
-        <Card>
-          <name>RedAtk5</name>
-          <weight>10</weight>
-        </Card>
+      <Component>
+        <name>BluAtk3</name>
+        <weight>10</weight>
+      </Component>
 
-        <Card>
-          <name>BlkAtk5</name>
-          <weight>10</weight>
-        </Card>
+      <Component>
+        <name>GrnHeal1</name>
+        <weight>10</weight>
+      </Component>
 
-        <Card>
-          <name>BlkHeal5</name>
-          <weight>5</weight>
-        </Card>
-        
-      </Components>
     </Deck>
     
   </Collection>
