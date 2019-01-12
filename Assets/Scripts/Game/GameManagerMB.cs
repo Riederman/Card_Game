@@ -16,6 +16,6 @@ public class GameManagerMB : Singleton<GameManagerMB>
 
     private void Start()
     {
-        //StartCoroutine(stateMachine.Run());
+        StartCoroutine(stateMachine.Run());
     }
 }

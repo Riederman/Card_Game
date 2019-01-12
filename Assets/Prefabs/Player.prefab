@@ -409,8 +409,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deckName: Player
-  hand: {fileID: 114015956617753006}
   healthBar: {fileID: 114301696088883086}
+  hand: {fileID: 114015956617753006}
 --- !u!114 &114364735274295554
 MonoBehaviour:
   m_ObjectHideFlags: 1

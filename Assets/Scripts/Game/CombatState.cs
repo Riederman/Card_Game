@@ -16,11 +16,15 @@ public class CombatState : IBaseState
         this.monster = monster;
     }
 
+    #region Turn
+
     public void Enter()
     {
         // Initialization at beginning of combat
         player.OnActorDeath += OnHaltExecution;
         monster.OnActorDeath += OnHaltExecution;
+        player.Opposite = monster;
+        monster.Opposite = player;
     }
 
     public IEnumerator Execute()
@@ -57,6 +61,10 @@ public class CombatState : IBaseState
         monster.OnActorDeath -= OnHaltExecution;
     }
 
+    #endregion
+
+    #region Delegates
+
     public bool HasDrawnCards()
     {
         return player.HasDrawnCards && monster.HasDrawnCards;
@@ -86,4 +94,6 @@ public class CombatState : IBaseState
     {
         isExecuting = false;
     }
+
+    #endregion
 }

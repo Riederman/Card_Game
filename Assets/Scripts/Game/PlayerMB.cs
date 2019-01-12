@@ -4,4 +4,9 @@
     {
         return -1;
     }
+
+    protected override bool IsPlayer()
+    {
+        return true;
+    }
 }

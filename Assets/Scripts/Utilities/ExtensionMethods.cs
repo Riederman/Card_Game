@@ -11,9 +11,4 @@ public static class ExtensionMethods
             list.Add((T)item.Clone());
         return list;
     }
-
-    public static void ToggleActive(this GameObject gameObj)
-    {
-        gameObj.SetActive(!gameObj.activeSelf);
-    }
 }

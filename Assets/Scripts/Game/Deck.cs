@@ -7,6 +7,8 @@ public class Deck
 {
     private List<DeckComponent> components = new List<DeckComponent>();
 
+    private List<DeckComponent> toReturn = new List<DeckComponent>();
+
     public Deck(string name)
     {
         // Load deck components from XML file
@@ -27,6 +29,7 @@ public class Deck
             if (random < cumulative)
             {
                 component.weight--;
+                toReturn.Add(component);
                 return component;
             }
                 
@@ -52,10 +55,13 @@ public class Deck
         return total;
     }
 
-    public void ReturnComponent(DeckComponent component)
+    public void ReturnComponents()
     {
-        // Adds weight to the returned component
-        if (components.Contains(component))
-            component.weight++;
+        foreach (DeckComponent component in toReturn)
+        {
+            if (components.Contains(component))
+                component.weight++;
+        }
+        toReturn.Clear();
     }
 }

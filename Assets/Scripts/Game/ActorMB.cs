@@ -1,18 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 public abstract class ActorMB : MonoBehaviour
 {
     [SerializeField] private string deckName;
-    [SerializeField] private HandMB hand;
     [SerializeField] private HealthBarMB healthBar;
+
+    [SerializeField] protected HandMB hand;
 
     private int cardIndex;
     private Deck deck;
 
     public System.Action OnActorDeath;
 
+    public ActorMB Opposite { get; set; }
     public bool HasDrawnCards { get; private set; }
     public bool HasSelectedCards { get; private set; }
     public bool HasRevealedCards { get; private set; }
@@ -20,22 +23,14 @@ public abstract class ActorMB : MonoBehaviour
     public bool HasEndedTurn { get; private set; }
 
     protected abstract int GetSelectedIndex();
+    protected abstract bool IsPlayer();
+
+    #region Unity
 
     private void Awake()
     {
         deck = new Deck(deckName);
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            DrawCards();
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            SelectCards();
-        }
+        hand.Initialize(IsPlayer());
     }
 
     private void OnEnable()
@@ -48,13 +43,18 @@ public abstract class ActorMB : MonoBehaviour
         healthBar.OnHealthZero -= OnHealthZero;
     }
 
+    #endregion
+
+    #region Turn
+
     public void DrawCards()
     {
+        Debug.Log("Draw Cards " + name);
         HasEndedTurn = false;
         StartCoroutine(DrawCardsCoroutine());
     }
 
-    public IEnumerator DrawCardsCoroutine()
+    private IEnumerator DrawCardsCoroutine()
     {
         List<CardXML> cards = new List<CardXML>();
         List<DeckComponent> components = new List<DeckComponent>();
@@ -68,49 +68,51 @@ public abstract class ActorMB : MonoBehaviour
 
     public void SelectCards()
     {
+        Debug.Log("Select Cards " + name);
         StartCoroutine(SelectCardsCoroutine());
     }
 
-    public IEnumerator SelectCardsCoroutine()
+    private IEnumerator SelectCardsCoroutine()
     {
         cardIndex = GetSelectedIndex();
-
         while (cardIndex < 0)
-        {
             yield return null;
-        }
-
         yield return hand.SelectCard(cardIndex);
-        yield return new WaitForSeconds(2);
         HasSelectedCards = true;
     }
 
     public void RevealCards()
     {
+        Debug.Log("Reveal Cards " + name);
         StartCoroutine(RevealCardsCoroutine());
     }
 
-    public IEnumerator RevealCardsCoroutine()
+    private IEnumerator RevealCardsCoroutine()
     {
-        // TODO: Reveal cards
-        yield return new WaitForSeconds(2);
+        yield return hand.RevealCard(cardIndex);
         HasRevealedCards = true;
     }
 
     public void ApplyEffects()
     {
+        Debug.Log("Apply Effects " + name);
         StartCoroutine(ApplyEffectsCoroutine());
     }
 
-    public IEnumerator ApplyEffectsCoroutine()
+    private IEnumerator ApplyEffectsCoroutine()
     {
-        // TODO: Apply effects
+        IEffect effect = hand.GetCardEffect(cardIndex);
+        EffectMessage message = new EffectMessage();
+        message.target = effect.CanTargetSelf ? this : Opposite;
+        message.value = hand.GetCardValue(cardIndex);
+        effect.ApplyEffect(message);
         yield return new WaitForSeconds(2);
         HasAppliedEffects = true;
     }
 
-    public void EndTurn()
+    public virtual void EndTurn()
     {
+        deck.ReturnComponents();
         hand.UnsubscribeOnCardSelect(OnCardSelect);
         hand.ClearHand();
         HasDrawnCards = false;
@@ -126,16 +128,34 @@ public abstract class ActorMB : MonoBehaviour
         HasEndedTurn = true;
     }
 
+    #endregion
+
+    #region Interaction
+
+    public void AddHealth(int value)
+    {
+        healthBar.AddHealth(value);
+    }
+
+    public void RemoveHealth(int value)
+    {
+        healthBar.RemoveHealth(value);
+    }
+
+    #endregion
+
+    #region Delegates
+
     private void OnHealthZero()
     {
         if (OnActorDeath != null)
-        {
             OnActorDeath();
-        }
     }
 
     private void OnCardSelect(int index)
     {
         cardIndex = index;
     }
+
+    #endregion
 }

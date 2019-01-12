@@ -6,4 +6,9 @@ public class MonsterMB : ActorMB
     {
         return Random.Range(0, GameConstants.NUM_CARDS_PER_HAND);
     }
+
+    protected override bool IsPlayer()
+    {
+        return false;
+    }
 }
