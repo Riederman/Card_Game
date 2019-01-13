@@ -17,7 +17,7 @@ public class HealthBarMB : MonoBehaviour
         Assert.IsTrue(slider != null);
         Assert.IsTrue(textRend != null);
         // Set initial UI values
-        slider.minValue = minLimit;
+        slider.minValue = 0;
         slider.maxValue = maxLimit;
         RefreshUI();
     }
@@ -37,8 +37,6 @@ public class HealthBarMB : MonoBehaviour
         if (health - value > minLimit)
             health -= value;
         else health = minLimit;
-        if (health <= 0 && OnHealthZero != null)
-            OnHealthZero();
         RefreshUI();
     }
 
@@ -47,5 +45,12 @@ public class HealthBarMB : MonoBehaviour
         // Update UI view to reflect current values
         slider.value = health;
         textRend.text = health.ToString() + " / " + maxLimit.ToString();
+    }
+
+    public void CheckOnHealthZero()
+    {
+        // Calls the event if health is less than zero
+        if (health <= 0 && OnHealthZero != null)
+            OnHealthZero();
     }
 }

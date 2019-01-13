@@ -347,6 +347,7 @@ MonoBehaviour:
   colorRend: {fileID: 212417365695651130}
   actionRend: {fileID: 212277567373691878}
   glowObj: {fileID: 1030097009535886}
+  backObj: {fileID: 1137486567395214}
 --- !u!114 &114734024147473106
 MonoBehaviour:
   m_ObjectHideFlags: 1

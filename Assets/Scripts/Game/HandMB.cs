@@ -72,16 +72,10 @@ public class HandMB : MonoBehaviour
         cards.Clear();
     }
 
-    public int GetCardValue(int index)
+    public CardMB GetCardByIndex(int index)
     {
         Assert.IsTrue(index >= 0 && index < cards.Count);
-        return cards[index].Value;
-    }
-
-    public IEffect GetCardEffect(int index)
-    {
-        Assert.IsTrue(index >= 0 && index < cards.Count);
-        return cards[index].Effect;
+        return cards[index];
     }
 
     #endregion

@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Assertions;
 
 public abstract class ActorMB : MonoBehaviour
 {
@@ -16,6 +15,7 @@ public abstract class ActorMB : MonoBehaviour
     public System.Action OnActorDeath;
 
     public ActorMB Opposite { get; set; }
+    public ColorType CurrentColor { get; private set; }
     public bool HasDrawnCards { get; private set; }
     public bool HasSelectedCards { get; private set; }
     public bool HasRevealedCards { get; private set; }
@@ -101,17 +101,20 @@ public abstract class ActorMB : MonoBehaviour
 
     private IEnumerator ApplyEffectsCoroutine()
     {
-        IEffect effect = hand.GetCardEffect(cardIndex);
+        CardMB card = hand.GetCardByIndex(cardIndex);
         EffectMessage message = new EffectMessage();
-        message.target = effect.CanTargetSelf ? this : Opposite;
-        message.value = hand.GetCardValue(cardIndex);
-        effect.ApplyEffect(message);
-        yield return new WaitForSeconds(2);
+        message.target = card.Effect.CanTargetSelf ? this : Opposite;
+        CurrentColor = card.Color;
+        yield return new WaitForSeconds(1);
+        float multiplier = GetColorMultiplier(CurrentColor, Opposite.CurrentColor);
+        message.value = (int)(card.Value * multiplier);
+        card.Effect.ApplyEffect(message);
         HasAppliedEffects = true;
     }
 
     public virtual void EndTurn()
     {
+        healthBar.CheckOnHealthZero();
         deck.ReturnComponents();
         hand.UnsubscribeOnCardSelect(OnCardSelect);
         hand.ClearHand();
@@ -124,7 +127,7 @@ public abstract class ActorMB : MonoBehaviour
 
     public IEnumerator EndTurnCoroutine()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         HasEndedTurn = true;
     }
 
@@ -140,6 +143,32 @@ public abstract class ActorMB : MonoBehaviour
     public void RemoveHealth(int value)
     {
         healthBar.RemoveHealth(value);
+    }
+
+    public float GetColorMultiplier(ColorType offensive, ColorType defensive)
+    {
+        if (offensive == ColorType.Red)
+        {
+            if (defensive == ColorType.Blue) return .5f;
+            if (defensive == ColorType.Green || defensive == ColorType.Black) return 2;
+        }
+        if (offensive == ColorType.Green)
+        {
+            if (defensive == ColorType.Blue) return .5f;
+            if (defensive == ColorType.Red || defensive == ColorType.Black) return 2;
+        }
+        if (offensive == ColorType.Blue)
+        {
+            if (defensive == ColorType.Green) return .5f;
+            if (defensive == ColorType.Red || defensive == ColorType.Black) return 2;
+        }
+        if (offensive == ColorType.Black)
+        {
+            if (defensive == ColorType.Yellow) return .5f;
+            if (defensive != ColorType.Black) return 2;
+        }
+        if (offensive == ColorType.Yellow && defensive == ColorType.Black) return 2;
+        return 1;
     }
 
     #endregion

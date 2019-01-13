@@ -392,7 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afff7fe4e21920847aee7a07284e0cd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minLimit: 0
+  minLimit: -100
   maxLimit: 100
   health: 100
   slider: {fileID: 114546199214946200}
